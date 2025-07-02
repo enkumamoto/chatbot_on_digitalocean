@@ -1,18 +1,3 @@
-
-terraform {
-  required_version = ">= 1.0"
-  required_providers {
-    digitalocean = {
-      source  = "digitalocean/digitalocean"
-      version = "~> 2.0"
-    }
-  }
-}
-
-provider "digitalocean" {
-  token = var.digitalocean_token
-}
-
 # Database PostgreSQL gerenciado para o chatbot
 resource "digitalocean_database_cluster" "chatbot_db" {
   name       = "${var.project_name}-chatbot-db"
