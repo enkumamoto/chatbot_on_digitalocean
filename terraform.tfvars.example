@@ -1,0 +1,32 @@
+
+# Exemplo de arquivo terraform.tfvars
+# Copie este arquivo para terraform.tfvars e preencha com seus valores
+
+# Token de API do DigitalOcean (obrigatório)
+digitalocean_token = "dop_v1_your_digitalocean_token_here"
+
+# Configurações do projeto
+project_name = "meu-chatbot"
+environment  = "production"
+
+# Configurações de região
+region = "nyc1"  # ou "sfo3", "ams3", "sgp1", "lon1", "fra1", "tor1", "blr1"
+
+# Configurações da aplicação
+app_instance_count = 1
+app_instance_size  = "basic-xxs"  # basic-xxs, basic-xs, basic-s, professional-xs, etc.
+
+# Configurações do banco de dados
+database_size           = "db-s-1vcpu-1gb"
+enable_database_replica = false
+replica_region         = "sfo3"
+
+# Configurações do repositório Git
+git_repo_url = "https://github.com/seu-usuario/seu-chatbot.git"
+git_branch   = "main"
+
+# Domínio personalizado (opcional)
+custom_domain = ""  # exemplo: "chatbot.meudominio.com"
+
+# Tags adicionais
+default_tags = ["terraform", "chatbot", "production"]
